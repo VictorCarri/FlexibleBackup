@@ -16,10 +16,6 @@
 
 /* Namespace aliases to save typing */
 namespace bpo = boost::program_options;
-namespace bl = boost::log;
-namespace blsrc = boost::log::sources;
-namespace blsnk = boost::log::sinks;
-namespace blk = boost::log::keywords;
 
 /*
 * @name waitForUser
@@ -57,7 +53,7 @@ std::string getHomePath()
 
 	else if (getenv("HOMEDRIVE") != NULL && getenv("HOMEPATH") != NULL) // Windows - no USERPROFILE, use HOMEDRIVE and HOMEDIR'
 	{
-		boost::path
+		//boost::path
 	}
 
 	return hpss.str();
@@ -80,7 +76,7 @@ int main(int argc, char* argv[])
 		/* Set up option variables */
 		bpo::variables_map vm; // Holds option values
 		
-		store(bpo::parse_config_file(configFileStream, config_file_options), vm);
+		//store(bpo::parse_config_file(configFileStream, config_file_options), vm);
 		notify(vm);
 
 		/* Add options from command line (override config file) */
